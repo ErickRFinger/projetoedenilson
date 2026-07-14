@@ -650,6 +650,11 @@ header.scrolled {
     border-color: var(--accent-orange);
 }
 
+select option {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
 .sim-items-selector {
     border-top: 1px solid var(--glass-border);
     padding-top: 24px;
