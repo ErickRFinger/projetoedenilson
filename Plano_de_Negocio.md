@@ -1,11 +1,11 @@
 # PLANO DE NEGÓCIOS & ARQUITETURA TECNOLÓGICA
-## PLATAFORMA EDENILSON - MARKETPLACE DE SERVIÇOS E MATERIAIS DE CONSTRUÇÃO
+## PLATAFORMA CONSTRUINFRA - MARKETPLACE DE SERVIÇOS E MATERIAIS DE CONSTRUÇÃO
 
 ---
 
 ## 1. INTRODUÇÃO E RESUMO EXECUTIVO
 
-A **Plataforma Edenilson** nasce com o propósito de resolver uma das maiores dores do mercado brasileiro de construção civil e serviços gerais: a descentralização, a falta de confiança e a dificuldade de orçamentação. 
+A **Plataforma ConstruInfra** nasce com o propósito de resolver uma das maiores dores do mercado brasileiro de construção civil e serviços gerais: a descentralização, a falta de confiança e a dificuldade de orçamentação. 
 
 Ao criar um ecossistema integrado que une **Prestadores de Serviços (mão de obra)** e **Lojas de Varejo (materiais de construção)**, a plataforma elimina o atrito de ter que procurar profissionais de forma avulsa e cotar materiais em múltiplos canais de venda. O cliente final tem a possibilidade de simular uma reforma inteira, ver a estimativa de custo de material e mão de obra, contratar o profissional e comprar os insumos de maneira unificada e otimizada por geolocalização.
 

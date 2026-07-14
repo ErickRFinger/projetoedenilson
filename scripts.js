@@ -459,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.classList.remove('active');
         
         // Show customized alert
-        alert('🎉 Sucesso! Seu pedido/solicitação foi enviado com sucesso para a plataforma Edenilson. O parceiro entrará em contato em breve.');
+        alert('🎉 Sucesso! Seu pedido/solicitação foi enviado com sucesso para a plataforma ConstruInfra. O parceiro entrará em contato em breve.');
         
         bookingForm.reset();
     });
