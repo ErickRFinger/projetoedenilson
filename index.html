@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edenilson - Marketplace de Serviços & Materiais de Construção</title>
+    <meta name="description" content="Encontre pedreiros, pintores, funileiros e compre materiais de construção de forma simples, rápida e barata.">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="glass-panel">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-helmet-safety" style="color: var(--accent-orange)"></i>
+                Edenilson<span>Marketplace</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#inicio">Início</a>
+                <a href="#vantagens">Vantagens</a>
+                <a href="#marketplace">Marketplace</a>
+                <a href="#simulador">Simulador</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#simulador" class="btn btn-secondary">Simular Reforma</a>
+                <a href="#anunciar" class="btn btn-primary">Anunciar</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Reforma e Construção Unificada</span>
+                <h1 class="hero-title">Sua obra ou serviço resolvido em um só lugar.</h1>
+                <p class="hero-desc">Conectamos você aos melhores pintores, pedreiros e funileiros da região, além de cotações em tempo real nas principais lojas de materiais de construção.</p>
+                
+                <!-- Search bar -->
+                <div class="search-panel glass-panel">
+                    <div class="search-input-wrapper">
+                        <i class="fa fa-magnifying-glass"></i>
+                        <input type="text" id="search-input" placeholder="O que você está procurando hoje? (ex: pedreiro, cimento...)">
+                    </div>
+                    <div class="search-select-wrapper">
+                        <select id="category-select">
+                            <!-- Populated dynamically via JS based on active tab -->
+                        </select>
+                    </div>
+                    <button id="search-btn" class="btn btn-primary">
+                        <i class="fa fa-search"></i> Buscar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="vantagens" class="advantages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Por que o Marketplace Edenilson?</h2>
+                <p class="section-desc">Criamos a ponte perfeita entre a necessidade de mão de obra e o fornecimento de insumos para facilitar a sua vida.</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon-wrapper icon-orange">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3>Profissionais Avaliados</h3>
+                    <p>Encontre pedreiros, pintores e funileiros qualificados com histórico de avaliações, portfólio de obras anteriores e preços claros por diária ou serviço.</p>
+                    <a href="#marketplace" class="feature-link link-orange">Buscar Profissional <i class="fa fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon-wrapper icon-teal">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                    </div>
+                    <h3>Materiais Direto da Loja</h3>
+                    <p>Compare preços de cimento, tintas, tijolos e ferragens nas maiores lojas de materiais de construção e finalize sua compra com entrega rápida.</p>
+                    <a href="#marketplace" class="feature-link link-teal">Ver Lojas Parceiras <i class="fa fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon-wrapper icon-orange">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3>Simulador Inteligente</h3>
+                    <p>Use nosso simulador integrado para calcular simultaneamente o custo de todos os materiais e os dias de mão de obra necessários, gerando um orçamento fechado.</p>
+                    <a href="#simulador" class="feature-link link-orange">Simular Orçamento <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketplace Section -->
+    <section id="marketplace" class="marketplace-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Explore o Marketplace</h2>
+                <p id="marketplace-subtitle" class="section-desc">Encontre profissionais qualificados e as melhores lojas de materiais em um ambiente 100% integrado</p>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="tabs-wrapper">
+                <div class="tabs">
+                    <button id="tab-profissionais" class="tab-btn active">
+                        <i class="fa-solid fa-user-tie"></i> Profissionais (Mão de Obra)
+                    </button>
+                    <button id="tab-materiais" class="tab-btn">
+                        <i class="fa-solid fa-cubes"></i> Lojas de Materiais
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dynamic Grid (Populated via scripts.js) -->
+            <div id="items-grid" class="items-grid">
+                <!-- Cards will load here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulator Section -->
+    <section id="simulador" class="simulator-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Simulador de Orçamento de Obra</h2>
+                <p class="section-desc">Simule o custo aproximado da sua reforma somando mão de obra e materiais. Tenha controle total antes de começar!</p>
+            </div>
+
+            <div class="simulator-grid">
+                <!-- Simulator Controls -->
+                <div class="simulator-panel glass-panel">
+                    <h3 class="sim-title">Adicionar Itens ao Orçamento</h3>
+                    <p class="sim-desc">Escolha materiais ou profissionais e estime a quantidade necessária para adicioná-los à planilha.</p>
+                    
+                    <div class="form-group">
+                        <label for="sim-product-select">Selecione o Insumo ou Profissional</label>
+                        <select id="sim-product-select" class="form-control">
+                            <!-- Populated dynamically via JS -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sim-product-qty">Quantidade / Dias de Serviço</label>
+                        <input type="number" id="sim-product-qty" class="form-control" value="1" min="1">
+                    </div>
+
+                    <button id="sim-btn-add" class="sim-btn-add">
+                        <i class="fa fa-plus"></i> Adicionar ao Orçamento
+                    </button>
+                </div>
+
+                <!-- Simulator Summary (Cart) -->
+                <div class="sim-summary-panel">
+                    <h3 class="summary-title"><i class="fa-solid fa-receipt"></i> Resumo do Orçamento</h3>
+                    
+                    <div id="summary-list" class="summary-list">
+                        <!-- Items will display here -->
+                    </div>
+
+                    <div class="summary-totals">
+                        <div class="total-row">
+                            <span>Subtotal da Obra</span>
+                            <span id="summary-subtotal">R$ 0,00</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Taxa de Intermediação (5%)</span>
+                            <span id="summary-tax">R$ 0,00</span>
+                        </div>
+                        <div class="total-row grand-total">
+                            <span>Total Estimado</span>
+                            <span id="summary-total">R$ 0,00</span>
+                        </div>
+                    </div>
+
+                    <button id="btn-simulate-checkout" class="btn btn-primary" style="width: 100%; padding: 14px;">
+                        <i class="fa-solid fa-cart-shopping"></i> Fechar Orçamento Simulado
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner CTA Section -->
+    <section id="anunciar" class="cta-section">
+        <div class="container">
+            <div class="cta-box glass-panel">
+                <div class="cta-content">
+                    <h2 class="cta-title">Quer fazer parte da rede Edenilson?</h2>
+                    <p class="cta-desc">Se você é um pintor, pedreiro, funileiro ou possui uma loja de materiais de construção, anuncie conosco e receba dezenas de solicitações de clientes diariamente na sua região.</p>
+                </div>
+                <div class="cta-actions">
+                    <button class="btn btn-primary" onclick="alert('Seja bem-vindo parceiro! Em breve abriremos o portal do prestador.')">Oferecer Serviços</button>
+                    <button class="btn btn-teal" onclick="alert('Seja bem-vindo parceiro! Em breve abriremos o cadastro de lojas de materiais.')">Cadastrar Minha Loja</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="logo" style="margin-bottom: 16px;">
+                        <i class="fa-solid fa-helmet-safety" style="color: var(--accent-orange)"></i>
+                        Edenilson<span>Marketplace</span>
+                    </a>
+                    <p>O primeiro ecossistema completo focado em conectar clientes, prestadores de serviços da construção e fornecedores de materiais de forma inteligente e integrada.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="#marketplace">Pedreiros</a></li>
+                        <li><a href="#marketplace">Pintores</a></li>
+                        <li><a href="#marketplace">Funileiros</a></li>
+                        <li><a href="#marketplace">Materiais Básicos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Plataforma</h4>
+                    <ul>
+                        <li><a href="#vantagens">Sobre Nós</a></li>
+                        <li><a href="#simulador">Simulador de Obra</a></li>
+                        <li><a href="#anunciar">Trabalhe Conosco</a></li>
+                        <li><a href="#">Contato Suporte</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Plataforma Edenilson & Co. Todos os direitos reservados.</p>
+                <p>Desenvolvido com excelência visual e funcionalidade.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Action Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <button id="modal-close" class="modal-close">&times;</button>
+            <h3 id="modal-title-text" class="modal-title">Formulário de Solicitação</h3>
+            <p id="modal-desc-text" class="modal-desc">Complete os dados para prosseguir.</p>
+            
+            <form id="booking-form">
+                <input type="hidden" id="form-item-id">
+                <input type="hidden" id="form-item-type">
+                
+                <div class="form-group">
+                    <label for="user-name">Seu Nome Completo</label>
+                    <input type="text" id="user-name" class="form-control" placeholder="Digite seu nome..." required>
+                </div>
+                <div class="form-group">
+                    <label for="user-phone">Telefone / WhatsApp</label>
+                    <input type="tel" id="user-phone" class="form-control" placeholder="(11) 99999-9999" required>
+                </div>
+
+                <!-- Dynamic inputs will be injected here via JS -->
+                <div id="modal-input-fields"></div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 16px; padding: 12px;">
+                    Confirmar Solicitação
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main JavaScript Logic -->
+    <script src="scripts.js"></script>
+</body>
+</html>
